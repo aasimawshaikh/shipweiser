@@ -10,7 +10,6 @@ export default function ProductPage() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All categories");
   const [quoteItems, setQuoteItems] = useState<QuoteItem[]>([]);
-  const [showQuoteForm, setShowQuoteForm] = useState(false);
   const [buyerName, setBuyerName] = useState("");
   const [company, setCompany] = useState("");
   const [buyerEmail, setBuyerEmail] = useState("");
