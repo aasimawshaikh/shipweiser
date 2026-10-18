@@ -1,5 +1,5 @@
 import { siteContent } from "../data/siteContent";
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function AboutPage() {
