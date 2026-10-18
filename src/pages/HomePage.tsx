@@ -1,194 +1,49 @@
+import { ArrowRight, ArrowUpRight, Globe2, ShoppingBag, ShieldCheck, Truck, PackageCheck } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-  ArrowDown,
-  ArrowRight,
-  ArrowUpRight,
-  CheckCircle2,
-  Layers3,
-  MoveUpRight,
-  Sparkles,
-} from "lucide-react";
 import { siteContent } from "../data/siteContent";
 
 export default function HomePage() {
-  const { home } = siteContent;
-
-  return (
-    <>
-      <main>
-        <section className="hero-section">
-          <div className="hero-glow hero-glow-one" />
-          <div className="hero-glow hero-glow-two" />
-
-          <div className="container hero-grid">
-            <div className="hero-copy">
-              <div className="eyebrow">
-                <span className="eyebrow-dot" />
-                {home.eyebrow}
-              </div>
-
-              <h1>
-                {home.title.split(" ").slice(0, -2).join(" ")}{" "}
-                <span className="text-accent">
-                  {home.title.split(" ").slice(-2).join(" ")}
-                </span>
-              </h1>
-
-              <p className="hero-description">{home.description}</p>
-
-              <div className="hero-actions">
-                <Link to={home.primaryAction.href} className="button-primary">
-                  {home.primaryAction.label}
-                  <ArrowUpRight size={18} />
-                </Link>
-
-                <Link to={home.secondaryAction.href} className="button-secondary">
-                  {home.secondaryAction.label}
-                  <ArrowRight size={17} />
-                </Link>
-              </div>
-
-              <div className="hero-footnote">
-                <CheckCircle2 size={16} />
-                <span>Brand and content pending source verification</span>
-              </div>
-            </div>
-
-            <div className="hero-visual" aria-label="Decorative design preview">
-              <div className="visual-orbit orbit-one" />
-              <div className="visual-orbit orbit-two" />
-
-              <div className="visual-card visual-card-back">
-                <div className="visual-card-top">
-                  <span className="mini-dot" />
-                  <span className="mini-dot" />
-                  <span className="mini-dot" />
-                </div>
-                <div className="skeleton skeleton-long" />
-                <div className="skeleton skeleton-medium" />
-                <div className="skeleton skeleton-short" />
-                <div className="visual-bars">
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              </div>
-
-              <div className="visual-card visual-card-front">
-                <div className="visual-icon">
-                  <Layers3 size={25} />
-                </div>
-                <span className="visual-label">DESIGN PREVIEW</span>
-                <h2>A new digital experience.</h2>
-                <p>
-                  A visual placeholder until the original site is audited.
-                </p>
-                <div className="visual-card-footer">
-                  <span>SHIPWEISER</span>
-                  <MoveUpRight size={18} />
-                </div>
-              </div>
-
-              <div className="floating-badge">
-                <Sparkles size={17} />
-                <span>Built for the next chapter</span>
-              </div>
-            </div>
+  return <>
+    <main>
+      <section className="split-home" aria-label="Choose a Shipweiser business">
+        <article className="business-panel business-panel-ecom">
+          <div className="panel-topline"><ShoppingBag /> Domestic business · E-commerce</div>
+          <div className="panel-main">
+            <span className="section-kicker">DISCOVER SHIPWEISER</span>
+            <h1>Everyday products. <span className="text-accent">Thoughtfully sourced.</span></h1>
+            <p>Explore our product catalogue and connect with our team for product information, availability and orders across India.</p>
+            <div className="panel-actions"><Link to="/products" className="button-primary">Explore catalogue <ArrowUpRight size={18}/></Link><a className="button-secondary" href={`https://wa.me/917020967599?text=${encodeURIComponent("Hello Shipweiser, I am enquiring about your product catalogue.")}`} target="_blank" rel="noreferrer">Enquire on WhatsApp <ArrowRight size={16}/></a></div>
           </div>
-
-          <div className="container hero-bottom">
-            <span>THE REDESIGN STARTS HERE</span>
-            <ArrowDown size={17} />
+          <div className="panel-meta"><span>DOMESTIC ENQUIRIES</span><a className="panel-email" href={`mailto:${siteContent.emails.ecommerce}`}>{siteContent.emails.ecommerce}</a></div>
+          <div className="panel-visual"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80" alt="" /></div>
+        </article>
+        <span className="split-label" aria-hidden="true">OR</span>
+        <article className="business-panel business-panel-export">
+          <div className="panel-topline"><Globe2 /> International business · Export & Import</div>
+          <div className="panel-main">
+            <span className="section-kicker">INDIA TO THE WORLD</span>
+            <h1>Connecting quality <span style={{color:"#9bd4cb"}}>from India to the world.</span></h1>
+            <p>We connect international buyers with Indian agricultural products, textiles and medical disposables through reliable sourcing and coordinated trade.</p>
+            <div className="panel-actions"><Link to="/products" className="button-primary">Explore export products <ArrowUpRight size={18}/></Link><Link to="/contact" className="button-secondary">Request a catalogue <ArrowRight size={16}/></Link></div>
           </div>
-        </section>
-
-        <section className="intro-section section-padding" id="overview">
-          <div className="container">
-            <div className="section-heading">
-              <span className="section-kicker">01 / THE FOUNDATION</span>
-              <h2>
-                A stronger digital presence.
-                <br />
-                <span className="text-muted">Built around your brand.</span>
-              </h2>
-              <p>
-                This section is a design placeholder. Its final message and
-                supporting content will come from the existing WordPress site.
-              </p>
-            </div>
-
-            <div className="feature-grid">
-              <article className="feature-card">
-                <div className="feature-icon">
-                  <Layers3 size={23} />
-                </div>
-                <span className="feature-number">01</span>
-                <h3>Clear structure</h3>
-                <p>
-                  Organize verified pages and information into a consistent,
-                  easy-to-navigate website.
-                </p>
-                <span className="feature-link">
-                  Page architecture <ArrowUpRight size={16} />
-                </span>
-              </article>
-
-              <article className="feature-card feature-card-highlight">
-                <div className="feature-icon">
-                  <Sparkles size={23} />
-                </div>
-                <span className="feature-number">02</span>
-                <h3>Modern experience</h3>
-                <p>
-                  Create a responsive layout with thoughtful typography,
-                  spacing and accessible interactions.
-                </p>
-                <span className="feature-link">
-                  Visual system <ArrowUpRight size={16} />
-                </span>
-              </article>
-
-              <article className="feature-card">
-                <div className="feature-icon">
-                  <CheckCircle2 size={23} />
-                </div>
-                <span className="feature-number">03</span>
-                <h3>SEO preservation</h3>
-                <p>
-                  Carry forward verified URLs, metadata, internal links and
-                  existing content during migration.
-                </p>
-                <span className="feature-link">
-                  Migration plan <ArrowUpRight size={16} />
-                </span>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section className="closing-section">
-          <div className="container closing-inner">
-            <div>
-              <span className="section-kicker">02 / NEXT STEPS</span>
-              <h2>
-                Let's build the
-                <br />
-                real Shipweiser experience.
-              </h2>
-              <p>
-                Next, we will replace draft content with verified website
-                material and implement the original site's required pages.
-              </p>
-            </div>
-
-            <Link to="/contact" className="button-primary">
-              Contact page preview <ArrowUpRight size={18} />
-            </Link>
-          </div>
-        </section>
-      </main>
-    </>
-  );
+          <div className="panel-meta"><span>EXPORT / IMPORT ENQUIRIES</span><a className="panel-email" href={`mailto:${siteContent.emails.export}`}>{siteContent.emails.export}</a></div>
+          <div className="panel-visual"><img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1000&q=80" alt="" /></div>
+        </article>
+      </section>
+      <section className="section-wrap"><div className="container">
+        <div className="section-title"><span className="section-kicker">OUR PRODUCT CATEGORIES</span><h2>Indian sourcing. <span className="text-muted">Global possibilities.</span></h2><p>Shipweiser brings together agricultural, textile and healthcare supply categories for domestic buyers and international trade enquiries.</p></div>
+        <div className="product-grid">{siteContent.products.map((product) => <article className="product-card" key={product.slug}><img className="product-card-image" src={product.image} alt={product.name} loading="lazy"/><div className="product-card-body"><span className="section-kicker">{product.category}</span><h3>{product.name}</h3><p>{product.shortDescription}</p><Link className="text-link" to={`/products/${product.slug}`}>View product details <ArrowRight size={16}/></Link></div></article>)}</div>
+      </div></section>
+      <section className="section-wrap" style={{background:"#f5f8fa"}}><div className="container">
+        <div className="section-title"><span className="section-kicker">WHY SHIPWEISER</span><h2>Trust built into every connection.</h2><p>We focus on clear communication, sourcing relationships and dependable coordination from enquiry to delivery.</p></div>
+        <div className="benefit-strip">
+          <div className="benefit-item"><ShieldCheck size={24}/><strong>Quality focus</strong><span>Product specifications and applicable compliance are confirmed per order.</span></div>
+          <div className="benefit-item"><PackageCheck size={24}/><strong>Indian sourcing</strong><span>Connections to product origins and sourcing markets across India.</span></div>
+          <div className="benefit-item"><Globe2 size={24}/><strong>Global connections</strong><span>Support for international buyer enquiries and trade coordination.</span></div>
+          <div className="benefit-item"><Truck size={24}/><strong>Reliable coordination</strong><span>Clear communication around logistics, timelines and requirements.</span></div>
+        </div>
+      </div></section>
+      <section className="closing-section"><div className="container closing-inner"><div><span className="section-kicker">LET'S WORK TOGETHER</span><h2>Have a product or bulk order enquiry?</h2><p>Contact the right Shipweiser team for domestic product enquiries or international sourcing and export requirements.</p></div><Link to="/contact" className="button-primary">Contact Shipweiser <ArrowUpRight size={18}/></Link></div></section>
+    </main>
+  </>;
 }

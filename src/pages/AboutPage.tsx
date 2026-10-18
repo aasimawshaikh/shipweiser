@@ -1,0 +1,15 @@
+import { siteContent } from "../data/siteContent";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
+
+export default function AboutPage() {
+  return <main>
+    <section className="page-hero"><div className="container"><span className="section-kicker">ABOUT SHIPWEISER</span><h1>Indian products. Global connections. Trusted partnerships.</h1><p>At Shipweiser, we deliver more than products; we aim to deliver trust, quality and lasting business connections.</p></div></section>
+    <section className="section-wrap"><div className="container content-grid">
+      <div className="content-copy"><span className="section-kicker">OUR STORY</span><h2>Connecting Indian sourcing with market demand.</h2><p>Shipweiser is an India-based export and trading company founded by Dr. Md. Obaish Ali, Shahnaz Parween, Shafaque Nowrez Khan and Naushad Sheikh. We aim to bring quality Indian agricultural, textile and healthcare products to domestic and international markets.</p><p>Our approach combines healthcare-sector knowledge, sourcing relationships and coordinated logistics with a commitment to integrity, clear communication and long-term partnerships.</p></div>
+      <div className="content-copy"><span className="section-kicker">OUR MISSION</span><h2>Promoting Indian products with integrity and excellence.</h2><p>We aim to promote Indian agricultural, textile and healthcare products around the world by connecting buyers with suitable suppliers and helping coordinate product, documentation and delivery requirements.</p><ul><li>Strong sourcing networks across India</li><li>Quality-focused product selection</li><li>Efficient logistics and export coordination</li><li>Long-term, transparent business relationships</li></ul></div>
+    </div></section>
+    <section className="section-wrap" style={{background:"#f5f8fa"}}><div className="container"><div className="section-title"><span className="section-kicker">OUR LEADERSHIP</span><h2>The people behind Shipweiser.</h2><p>Our partners bring together experience across operations, domestic business, international trade, finance and marketing.</p></div><div className="leadership-grid">{siteContent.leadership.map((person)=><article className="leader-card" key={person.name}><div className="leader-photo">{person.image ? <img src={person.image} alt={person.name}/> : <span>Portrait<br/>coming soon</span>}</div><div><h3>{person.name}</h3><span className="leader-role">{person.role}</span><p><strong>{person.focus}</strong><br/>{person.description}</p></div></article>)}</div><p className="notice-small">Leadership portraits will be added after the team supplies approved photographs.</p></div></section>
+    <section className="closing-section"><div className="container closing-inner"><div><span className="section-kicker">CONNECT WITH US</span><h2>Let's build a reliable partnership.</h2><p>Tell us what you are sourcing or where you want to take your products.</p></div><Link to="/contact" className="button-primary">Contact us <ArrowUpRight size={18}/></Link></div></section>
+  </main>;
+}

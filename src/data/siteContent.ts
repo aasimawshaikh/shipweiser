@@ -1,27 +1,79 @@
 export const siteContent = {
   brand: "Shipweiser",
-
+  tagline: "Connecting Quality from India to the World",
+  emails: {
+    ecommerce: "connect@shipweiser.com",
+    export: "connectglobal@shipweiser.com",
+    general: "shipweiser@gmail.com",
+  },
+  phone: "+91-7020967599",
+  locations: "Nagpur and Bhagalpur, India",
   navigation: [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Insights", href: "/insights" },
-    { label: "Contact", href: "/contact" },
+    { label: "About Us", href: "/about" },
+    { label: "Products", href: "/products" },
+    { label: "Contact Us", href: "/contact" },
   ],
-
-  // DRAFT: Replace with verified WordPress content.
-  home: {
-    eyebrow: "HOMEPAGE CONTENT TO BE VERIFIED",
-    title: "Your next chapter starts here.",
-    description:
-      "Replace this draft introduction with Shipweiser's verified homepage content.",
-    primaryAction: {
-      label: "Explore services",
-      href: "/services",
+  products: [
+    {
+      slug: "foxnut-makhana",
+      name: "Foxnut (Makhana)",
+      shortDescription: "Premium Bihar-origin foxnuts sourced for wholesale, retail and international buyers.",
+      description: "Shipweiser connects buyers with premium foxnuts (makhana) sourced from Bihar. Product grading, processing, packaging and order specifications can be discussed according to buyer requirements.",
+      image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=85",
+      origin: "Bihar, India",
+      highlights: ["Premium sourcing", "Grading and packaging options", "Bulk and export enquiries"],
+      category: "Agricultural Products",
     },
-    secondaryAction: {
-      label: "Contact us",
-      href: "/contact",
+    {
+      slug: "textiles",
+      name: "Textiles",
+      shortDescription: "Linen, silk and textile products including bedsheets, garments and towels.",
+      description: "We work with sourcing networks for textiles, including linen and silk associated with Bhagalpur. Product selection and custom manufacturing requirements can be discussed with our team.",
+      image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
+      origin: "Bhagalpur and other Indian sourcing markets",
+      highlights: ["Linen and silk options", "Bedsheets, garments and towels", "Custom requirements by enquiry"],
+      category: "Textiles",
     },
-  },
+    {
+      slug: "medical-hospital-disposables",
+      name: "Medical & Hospital Disposables",
+      shortDescription: "Healthcare consumables for hospitals, distributors and institutional buyers.",
+      description: "Our healthcare product range may include surgical gloves, masks, syringes, IV sets and PPE kits. Availability, specifications, documentation and applicable product certifications are confirmed for each enquiry.",
+      image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1200&q=85",
+      origin: "India",
+      highlights: ["Surgical gloves and masks", "Syringes and IV sets", "PPE kits and institutional enquiries"],
+      category: "Healthcare Supplies",
+    },
+  ],
+  leadership: [
+    {
+      name: "Dr. Md. Obaish Ali",
+      role: "Managing Partner & Chief Executive Officer (CEO)",
+      focus: "International Trade & Exports",
+      description: "Provides strategic leadership and business expansion; oversees the healthcare product vertical, policy, compliance and institutional partnerships.",
+      image: "",
+    },
+    {
+      name: "Shahnaz Parween",
+      role: "Partner — Operations & Domestic Business",
+      focus: "E-Commerce & Operations",
+      description: "Leads procurement, vendor management and sourcing; oversees domestic supply chain, logistics, quality control and local trade operations.",
+      image: "",
+    },
+    {
+      name: "Naushad Sheikh",
+      role: "Partner — International Business & Export-Import",
+      focus: "International Trade",
+      description: "Leads global client acquisition, export-import documentation, regulatory coordination, shipping and international market development.",
+      image: "",
+    },
+    {
+      name: "Shafaque Nowrez Khan",
+      role: "Partner — Marketing, Finance & Compliance",
+      focus: "Finance & E-Commerce",
+      description: "Oversees finance, taxation, banking, legal compliance, branding, digital marketing and e-commerce operations.",
+      image: "",
+    },
+  ],
 };
