@@ -30,7 +30,7 @@ export const siteContent = {
       name: "Textiles",
       shortDescription: "Linen, silk and textile products including bedsheets, garments and towels.",
       description: "We work with sourcing networks for textiles, including linen and silk associated with Bhagalpur. Product selection and custom manufacturing requirements can be discussed with our team.",
-      image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=1200&q=85",
       origin: "Bhagalpur and other Indian sourcing markets",
       highlights: ["Linen and silk options", "Bedsheets, garments and towels", "Custom requirements by enquiry"],
       category: "Textiles",
