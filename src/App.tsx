@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import RouteMeta from "./components/RouteMeta";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -12,7 +13,7 @@ function NotFound() {
 }
 
 export default function App() {
-  return <BrowserRouter><div className="app-shell"><Navbar /><Routes>
+  return <BrowserRouter><div className="app-shell"><RouteMeta /><Navbar /><Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/about" element={<AboutPage />} />
     <Route path="/products" element={<ProductPage />} />
