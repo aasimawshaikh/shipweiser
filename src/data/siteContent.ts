@@ -4,7 +4,7 @@ export const siteContent = {
   emails: {
     ecommerce: "connect@shipweiser.com",
     export: "connectglobal@shipweiser.com",
-    general: "shipweiser@gmail.com",
+    general: "connect@shipweiser.com",
   },
   phone: "+91-7020967599",
   locations: "Nagpur and Bhagalpur, India",
